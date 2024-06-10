@@ -1,0 +1,511 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+  --main-Bg: #021545;
+  --main-Color: #fff;
+}
+
+/* start Restores */
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body{
+  font-size: 1.6rem;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+/* end Restores */
+
+/* start Utilities */
+.arsContainer{
+  width: 80%;
+  margin: auto;
+}
+.arsFlex{
+  display: flex;
+  align-items: center;
+}
+.arsBefore::before{
+  content: '';
+  display: block;
+  width: 10rem;
+  height: 3rem;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.arsAfter::after{
+  content: '';
+  display: block;
+  width: 10rem;
+  height: 3rem;
+  background: red;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.arsBtn1{
+  color: var(--main-Color);
+  background: var(--main-Bg);
+  width: 12rem;
+  height: 5rem;
+  border: none;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.line{
+  position: relative;
+  width: 100%;
+  height: .3rem;
+  background: var(--main-Color);
+  &::before{
+    content: '';
+    display: block;
+    background: #eb6408;
+    width: 30%;
+    height: 1rem;
+    position: absolute;
+    top: -.3rem;
+    left: 0;
+  }
+}
+/* end Utilities */
+
+/* start Style */
+
+/* start Nav */
+nav{
+  width: 100%;
+  height: 8rem;
+  padding: 1.5rem;
+  color: var(--main-Color);
+  background: var(--main-Bg);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  .navMain{
+    justify-content: space-between;
+    .logo{
+      font-size: 4rem;
+      cursor: pointer;
+    }
+    & ul{
+      gap: 5rem;
+      & li{
+        a{
+          color: var(--main-Color);
+          font-size: 2rem;
+        }
+      }
+    }
+    /* & i{
+      color: var(--main-Color);
+    } */
+  }
+}
+/* end Nav */
+
+/* start Header */
+header{
+  width: 100%;
+  height: 100vh;
+  margin-top: -8rem;
+  background: url('G [html.design]__GYM-website.psd (images)/weight-lifting-man.jpg');
+  background-position: center center;
+  background-size: 100% 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 2;
+  .headerContent{
+    .headerDiv{
+      width: 70%;
+      height: 50vh;
+      padding: 3rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 5rem;
+      -webkit-border-radius: 5rem;
+      -moz-border-radius: 5rem;
+      -ms-border-radius: 5rem;
+      -o-border-radius: 5rem;
+      text-align: center;
+      margin-inline: auto;
+      margin-block: 15rem 2rem;
+      h1{
+        color: var(--main-Color);
+        font-size: 6rem;
+      }
+      h2{
+        color: var(--main-Bg);
+        font-size: 4rem;
+        font-weight: bolder;
+      }
+      & p{
+        font-size: 2rem;
+      }
+    }
+    .arsBtn1{
+      display: block;
+      margin: auto;
+    }
+  }
+  .arsBefore::before{
+    height: 25rem;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+    background: var(--main-Bg);
+  }
+  .arsAfter::after{
+    content: '5/6';
+    color: var(--main-Color);
+    background: var(--main-Bg);
+    height: 20rem;
+    padding-bottom: 2rem;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    text-align: center;
+    align-content: end;
+  }
+  .headerArrow{
+    display: flex;
+    gap: 1rem;
+    justify-self: start;
+    margin-left: 4rem;
+    & i:first-of-type, i:last-of-type{
+      color: var(--main-Color);
+      background: var(--main-Bg);
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+    & i:last-of-type{
+      color: var(--main-Bg);
+      background: var(--main-Color);
+    }
+  }
+}
+/* end Header */
+
+/* start About */
+#About{
+  color: var(--main-Color);
+  background: var(--main-Bg);
+  width: 100%;
+  margin-block: 5rem;
+  .aboutContent{
+    padding: 0;
+    .aboutText{
+      width: 50%;
+      padding: 5rem;
+      padding-left: 15rem;
+      & h1{
+        font-size: 5rem;
+      }
+      .line{
+        margin-block: 2rem;
+      }
+      .arsBtn1{
+        background: #eb6408;
+        margin-block: 2rem;
+      }
+    }
+    .aboutImage{
+      img{
+        width: 100%;
+      }
+    }
+    .aboutImage{
+      width: 50%;
+    }
+  }
+}
+/* end About */
+
+/* start Price */
+#Price{
+  .priceHeading{
+    font-size: 3rem;
+    text-align: center;
+    & div{
+      background: gray;
+      width: 40%;
+      margin: auto;
+      margin-block: 2rem;
+    }
+    & p{
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+  .priceList{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    div{
+      line-height: 3rem;
+      img{
+        width: 25rem;
+        margin-block: 2rem 1rem;
+      }
+      & p{
+        width: 20rem;
+      }
+    }
+  }
+  .arsBtn1{
+    font-size: 2rem;
+    display: block;
+    margin: 2rem auto;
+  }
+}
+/* end Price */
+
+/* start GYM */
+#Gym{
+  width: 100%;
+  height: calc(100vh - 8rem);
+  background: linear-gradient(to right, #021545 50%, rgba(255, 255, 255, 0)), url('G [html.design]__GYM-website.psd (images)/rectangle_29.jpg');
+  background-position: center;
+  background-size: 100% 100%;
+  .gymContent{
+    width: 60%;
+    height: 100%;
+    color: var(--main-Color);
+    margin-block: auto;
+    padding-block: 10%;
+    padding-left: 10%;
+    & h1{
+      font-size: 5rem;
+    }
+    & p{
+      line-height: 3rem;
+    }
+    .arsBtn1{
+      background: #eb6408;
+      width: 20rem;
+      margin-block: 5rem;
+    }
+  }
+}
+/* end GYM */
+
+/* start Class */
+#Class{
+  .classHeader{
+    font-size: 3rem;
+    text-align: center;
+    & div{
+      background: gray;
+      width: 40%;
+      margin: auto;
+      margin-block: 2rem;
+      }
+    & p{
+      font-size: 2rem;
+      font-weight: bold;
+      width: 60%;
+      margin: auto;
+    }
+  }
+  .classCard{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    .card{
+      padding: 5rem;
+      color: var(--main-Color);
+      background: #022430;
+      border-radius: 5rem;
+      -webkit-border-radius: 5rem;
+      -moz-border-radius: 5rem;
+      -ms-border-radius: 5rem;
+      -o-border-radius: 5rem;
+      line-height: 3rem;
+      text-align: center;
+      & h3{
+        font-size: 2rem;
+      }
+      & ul li:first-of-type{
+        font-size: 5rem;
+        margin-block: 2rem;
+      }
+    }
+    }
+      .allCardButton{
+        width: 70%;
+        margin: 3rem auto;
+        display: flex;
+        justify-content: space-between;
+        & button:nth-child(2){
+          background: #eb6408;
+        }
+  }
+}
+/* end Class */
+
+/* start Contact */
+#Contact{
+  color: var(--main-Color);
+  background-position: start;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  .contactContent{
+    width: 67%;
+    height: 100vh;
+    padding: 7rem 10rem;
+    background: url('G [html.design]__GYM-website.psd (images)/rectangle_32.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    & h1{
+      font-size: 4rem;
+    }
+    & div{
+      background: skyblue;
+      width: 70%;
+      margin-block: 1rem 5rem;
+    }
+    & form{
+      & input{
+        background: transparent;
+        width: 80%;
+        height: 5rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-bottom: .2rem solid var(--main-Color);
+      }
+      & textarea{
+        background: transparent;
+        width: 80%;
+        height: 10rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-bottom: .2rem solid var(--main-Color);
+      }
+      .arsBtn1{
+        display: block;
+        border: 1px solid white;
+      }
+    }
+  }
+  & img{
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+/* end Contact */
+
+/* start Footer */
+#Footer{
+  color: var(--main-Color);
+  background: var(--main-Bg);
+  padding: 5rem 25rem 1rem;
+  margin-top: -.1rem;
+  .footerContent{
+    & h4{
+      font-size: 2rem;
+      /* padding: 3rem; */
+      margin-bottom: 2rem;
+    }
+    & form{
+      display: flex;
+      & input{
+        /* background: transparent; */
+        width: 80%;
+        height: 4rem;
+        padding: 1rem;
+        border: none;
+      }
+      & button{
+        color: white;
+        background: #eb6408;
+        width: 20%;
+        height: 4rem;
+        border: none;
+      }
+    }
+    .addressTitle{
+      text-align: center;
+      width: 15rem;
+      height: 3rem;
+      display: block;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-bottom: .1rem solid white;
+    }
+    .address{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      & div{
+        width: 30%;
+        display: flex;
+        & i{
+          width: 5rem;
+          height: 5rem;
+          color: var(--main-Bg);
+          background: var(--main-Color);
+          display: grid;
+          place-items: center;
+        }
+        & p{
+          width: 70%;
+          padding-left: 2rem;
+          align-content: center;
+        }
+      }
+    }
+    .social{
+      text-align: center;
+      & i{
+        font-size: 2rem;
+        color: var(--main-Bg);
+        background: var(--main-Color);
+        width: 3rem;
+        height: 3rem;
+        margin: 2rem;
+        text-align: center;
+        align-content: center;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+      }
+    }
+    .copyright{
+      text-align: center;
+    }
+  }
+}
+/* end Footer */
+
+/* end Style */
